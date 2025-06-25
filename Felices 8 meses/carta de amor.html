@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Carta para Mi Amor</title>
+  <style>
+    body {
+      background-color: #fdf3f3;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .envelope {
+      position: relative;
+      width: 300px;
+      height: 200px;
+      background: #ffb6c1;
+      border: 2px solid #b30059;
+      cursor: pointer;
+      transition: transform 1s ease;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .flap {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 300px;
+      height: 100px;
+      background: #ff69b4;
+      clip-path: polygon(0 0, 50% 100%, 100% 0);
+      transform-origin: top;
+      transition: transform 1s ease;
+    }
+
+    .letter {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      padding: 20px;
+      box-sizing: border-box;
+      transform: translateY(0);
+      transition: transform 1s ease;
+      opacity: 0;
+      color: #333;
+    }
+
+    .envelope.open .flap {
+      transform: rotateX(180deg);
+    }
+
+    .envelope.open .letter {
+      transform: translateY(-100%);
+      opacity: 1;
+    }
+
+    .heart {
+      font-size: 2em;
+      text-align: center;
+      margin-bottom: 10px;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+<div class="envelope" onclick="this.classList.toggle('open')">
+  <div class="flap"></div>
+  <div class="letter">
+    <div class="heart">❤️</div>
+
+    <!-- 💚 Aquí puedes escribir el nombre de tu novia -->
+    <h2>Para mi amor, mi vida preciosa </h2>
+
+    <!-- 💚 Aquí puedes poner tu carta de amor personalizada -->
+    <p>
+      Desde que llegaste a mi vida,no e parado de sentir felicidad.
+      todos los dias se tornaron de colores cuando eran grises antes de vos.
+      te agradezco el estar conmigo apesar de todo lo que pasamos.
+      no paro de pensar que no me va a alcanzar la vida para compensar.
+      todo el amor que vos me das todos los dias.
+    </p>
+
+    <!-- 💚 Aquí puedes firmar con tu nombre -->
+    <p style="text-align:right; margin-top:20px;">
+      Felices 8 meses bebe gracias por otro mes mas haciendome feliz<br>
+      Firma:el futuro padre de tus hijos.
+    </p>
+  </div>
+</div>
+
+</body>
+</html>
